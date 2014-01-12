@@ -1,0 +1,8 @@
+<%= link_to "Home", root_path %>
+<br>
+<% @blog.each do |b| %>
+  <%= link_to blog_path(b) do %>
+    <% b.title %>
+  <% end %>
+  <br>  
+<% end %>

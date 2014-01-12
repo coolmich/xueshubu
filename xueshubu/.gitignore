@@ -14,3 +14,18 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Ignore other unneeded files.
+database.yml
+doc/
+*.swp
+*~
+
+.project
+.DS_Store
+.idea
+.secret
+
+/db/schema.rb
+db/schema.rb
+Gemfile.lock

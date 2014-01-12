@@ -1,0 +1,21 @@
+<div class="image-container">
+  <% url = @blog.logo.url%>
+  <div style="background-image: url(<%= url %>)" class="full-img">
+  </div>
+</div>
+
+<div class="container">
+  <div class="row title-author">
+    <div class="col-lg-10 col-md-10 col-lg-offset-2 col-md-offset-2 blog-title">
+      <%= @blog.title %>
+    </div>
+    <div class="col-lg-10 col-md-10 col-lg-offset-2 col-md-offset-2 blog-author">
+      <%= @blog.author %>
+    </div>
+  </div>
+  <div class="row content-container">
+    <div class="col-lg-8 col-md-8 col-lg-offset-2 col-md-offset-2 blog-content">
+      <%= simple_format(@blog.content) %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="container staff-frame">
+  <div class="row">
+    <% @staffs.each do |staff| %>
+      <div class="col-sm-3">
+        <a href="javascript:;" rel="popover" class="img-box">
+          <div class="pop-origin"></div>
+          <%= image_tag staff.first_img.url, :class=>'staff-first-img' %>
+        </a>
+        <div class="popover-title" style="display:none;"><%= staff.name%></div>
+        <div class="popover-content" style="display:none;"><%= staff.description%></div>
+      </div>
+    <% end %>
+  </div>
+</div>

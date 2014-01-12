@@ -1,0 +1,38 @@
+<div class="image-container">
+  <div style="background-image: url(<%= asset_path "geisel.jpg" %>)" class="full-img">
+    <div class="container introductive-title">
+      <br><header>学术</header>
+      <br><br><br>
+      <div class="row sub-topic-5">
+        <div class="col-md-3">
+          <%= link_to blogs_path(:category=>4) do %>
+            <span class="glyphicon glyphicon-list-alt"></span>
+          <% end %>
+          <h3>选课</h3>
+          <p>选课是神马?可以吃吗?学长学姐告诉你怎么吃.</p>
+        </div>
+        <div class="col-md-3">
+          <%= link_to blogs_path(:category=>5) do %>
+            <span class="glyphicon glyphicon-transfer"></span>
+          <% end %>
+          <h3>转学分</h3>
+          <p>主要介绍AP/A LEVEL/IB的转学分详情及注意事项</p>
+        </div>
+        <div class="col-md-3">
+          <%= link_to blogs_path(:category=>6) do %>
+            <span class="glyphicon glyphicon-tower"></span>
+          <% end %>
+          <h3>转学</h3>   
+          <p>为了转学,GE可得慎重选.否则一失足成千古恨.</p>       
+        </div>
+        <div class="col-md-3">
+          <%= link_to blogs_path(:category=>7) do %>
+            <span class="glyphicon glyphicon-edit"></span>
+          <% end %>
+          <h3>SDCC</h3>       
+          <p>某些存在是为了磨练我们的毅力,比如SDCC...</p>   
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
