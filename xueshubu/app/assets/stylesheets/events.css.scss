@@ -1,33 +1,75 @@
 .events-container{
-  .arrow-right{
-    float: left;
-    width: 0; 
-    height: 0; 
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-    border-left: 30px solid #eee;
-  }
-  .arrow-left{
-    float: left;
-    width: 0; 
-    height: 0; 
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;   
-    border-right:30px solid #eee; 
-  }
-  .row-left{
-    width: 400px;
-    float: right;
-    .event-panel-left{
-      float: left;
-      width: 350px;
+  background-color: #563d7c;
+  padding: 50px 0px;
+  .event-row{
+    width: 100%;
+    .col-on-the-left{
+      padding-right: 0px;
+      border-right: 3px solid #8C7AA7;
+      height: 270px;
     }
-  }
-  .row-right{
-    width: 400px;
-    .event-panel-right{
+    .arrow-right{
       float: left;
-      width: 350px;
+      width: 0; 
+      height: 0; 
+      border-top: 20px solid transparent;
+      border-bottom: 20px solid transparent;
+      border-left: 30px solid #674D8D;
+    }
+    .arrow-left{
+      float: left;
+      width: 0; 
+      height: 0; 
+      border-top: 20px solid transparent;
+      border-bottom: 20px solid transparent;   
+      border-right:30px solid #674D8D; 
+    }
+    .row{
+      padding: 20px 0px;
+    }
+    .row-left{
+      width: 400px;
+      float: right;
+      .event-panel-left{
+        float: left;
+        width: 350px;
+        border: none;
+        color: #E2D4F7;
+        border-top-left-radius: 5px;
+        .panel-body{
+          background-color: #7E61AA;
+        }
+        .panel-heading{
+          color: #eee;
+          border: none;
+          background-color: #674D8D;
+        }
+      }
+    }
+    .row-right{
+      width: 400px;
+      padding-left: 5px;
+      .event-panel-right{
+        float: left;
+        width: 350px;
+        border: none;
+        color: #E2D4F7;
+        .panel-body{
+          background-color: #7E61AA;
+        }
+        .panel-heading{
+          color: #eee;
+          border: none;
+          background-color: #674D8D;
+        }
+      }
+    }
+    .row-time{
+      padding-right: 20px;
+      width: auto;
+      .event-time{
+        width: auto;
+      }
     }
   }
 }

@@ -1,5 +1,9 @@
 <div class="events-container">
   <% @events.each do |event|%>
-    <%= render 'even_event', :event=>event%>
+    <% if event.id.even?%>
+      <%= render 'even_event', :event=>event%>
+    <% else %>
+      <%= render 'odd_event', :event=>event%>
+    <% end %>
   <% end %>
 </div>

@@ -1,7 +1,7 @@
-<div class="row">
-  <div class="col-sm-6">
-    <div class="row row-left">
-      <div class="panel panel-default event-panel-left">
+<div class="row event-row">
+  <div class="col-sm-6 col-on-the-left">
+    <div class="row row-left row-time">
+      <div class="panel panel-default event-panel-left event-time">
         <div class="panel-heading">
           <%= event.time%>
         </div>
@@ -10,13 +10,13 @@
     </div>
   </div>
 
-  <div class="col-sm-6">
+  <div class="col-sm-6" style="padding-right: 0px;">
     <div class="row row-right">
       <div class="arrow-left"></div>
       <div class="panel panel-default event-panel-right">
         <div class="panel-heading"><%= event.title%></div>
         <div class="panel-body">
-          <%= event.description%>
+          <%= event.description.truncate(140) %>
         </div>
       </div>
     </div>
