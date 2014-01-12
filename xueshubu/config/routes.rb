@@ -18,6 +18,7 @@ Xueshubu::Application.routes.draw do
   root 'home#home'
 
   resources :blogs
+  resources :events, only: [:index]
   # Example resource route with options:
   #   resources :products do
   #     member do
