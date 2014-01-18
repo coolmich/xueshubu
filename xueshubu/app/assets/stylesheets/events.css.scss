@@ -36,6 +36,10 @@
         border: none;
         color: #E2D4F7;
         border-top-left-radius: 5px;
+        &:hover{
+          box-shadow: -10px 10px 1px #432F61;
+          transition-duration: 1s;
+        }
         .panel-body{
           background-color: #7E61AA;
         }
@@ -54,6 +58,10 @@
         width: 350px;
         border: none;
         color: #E2D4F7;
+        &:hover{
+          box-shadow: 10px 10px 1px #432F61;
+          transition-duration: 1s;
+        }
         .panel-body{
           background-color: #7E61AA;
         }
@@ -69,6 +77,33 @@
       width: auto;
       .event-time{
         width: auto;
+      }
+    }
+  }
+  .modal-content{
+    overflow: auto;
+    background-color: #674D8D;
+    color: #EBE4F6;
+    padding: 30px;
+    .modal-header{
+      border-bottom: 2px solid #785F9C;
+      button.close{
+        color: #EBE4F6;
+      }
+    }
+    .modal-body{
+      hr{
+        border-top: 1px solid #674D8D;
+      }
+      .light-text{
+        color: #C1B5D3;
+        font-size: 12px;
+        margin: 0 0 3px 0;
+      }
+      .event-img{
+        float: left;
+        width: 30%;
+        padding: 0 1em 0 0;
       }
     }
   }

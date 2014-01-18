@@ -1,24 +1,28 @@
 <div class="row event-row">
-    <div class="col-sm-6 col-on-the-left">
-      <div class="row row-left">
+  <div class="col-sm-6 col-on-the-left">
+    <div class="row row-left">
+      <a href="#" data-toggle="modal" data-target="#myModal<%= event.id %>">
         <div class="panel panel-default event-panel-left">
-          <div class="panel-heading"><%= event.title%></div>
+          <div class="panel-heading"><h4><%= event.title%></h4></div>
           <div class="panel-body">
-            <%= event.description.truncate(140) %>
+              <%= event.description.truncate(140) %>
           </div>
         </div>
-        <div class="arrow-right"></div>
-      </div>
+      </a>
+      <div class="arrow-right"></div>
     </div>
+  </div>
 
-    <div class="col-sm-6" style="padding-right: 0px;">
-      <div class="row row-right row-time">
-        <div class="arrow-left"></div>
-        <div class="panel panel-default event-panel-right event-time">
-          <div class="panel-heading">
-            <%= event.time%>
-          </div>
+  <div class="col-sm-6" style="padding-right: 0px;">
+    <div class="row row-right row-time">
+      <div class="arrow-left"></div>
+      <div class="panel panel-default event-panel-right event-time">
+        <div class="panel-heading">
+          <%= event.time%>
         </div>
       </div>
     </div>
   </div>
+</div>
+
+<%= render 'show_event', :event=>event %>
