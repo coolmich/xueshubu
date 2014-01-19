@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140112154614) do
+ActiveRecord::Schema.define(version: 20140119064115) do
 
   create_table "blogs", force: true do |t|
     t.string   "title"
@@ -28,7 +28,6 @@ ActiveRecord::Schema.define(version: 20140112154614) do
 
   create_table "events", force: true do |t|
     t.string   "title"
-    t.string   "time"
     t.string   "place"
     t.text     "description"
     t.string   "event_img_file_name"
@@ -37,7 +36,11 @@ ActiveRecord::Schema.define(version: 20140112154614) do
     t.datetime "event_img_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "start_date"
+    t.integer  "category"
   end
+
+  add_index "events", ["start_date"], name: "index_events_on_start_date"
 
   create_table "rails_admin_histories", force: true do |t|
     t.text     "message"

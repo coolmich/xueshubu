@@ -1,4 +1,6 @@
 <div class="events-container">
+  <%= render 'event_nav'%>
+
   <% @events.each do |event|%>
     <% if event.id.even?%>
       <%= render 'even_event', :event=>event%>

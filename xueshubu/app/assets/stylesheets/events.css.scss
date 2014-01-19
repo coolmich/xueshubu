@@ -1,6 +1,21 @@
 .events-container{
   background-color: #563d7c;
-  padding: 50px 0px;
+  padding: 70px 0px;
+  .event-nav{
+    z-index: 1000;
+    width: 100%;
+    top: 0px;
+    position: fixed;
+    background-color: rgba(255,255,255,0.1);
+    border: none;
+    a{
+      color: rgba(255,255,255,0.5);
+      &:hover{
+        background-color: rgba(255,255,255,0.1);
+        color: rgba(255,255,255,0.8);
+      }
+    }
+  }
   .event-row{
     width: 100%;
     .col-on-the-left{

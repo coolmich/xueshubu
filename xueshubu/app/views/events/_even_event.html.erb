@@ -3,7 +3,7 @@
     <div class="row row-left row-time">
       <div class="panel panel-default event-panel-left event-time">
         <div class="panel-heading">
-          <%= event.time%>
+          <%= event.start_date.strftime('%a, %d %b %Y') %>
         </div>
       </div>
       <div class="arrow-right"></div>
@@ -17,7 +17,7 @@
         <div class="panel panel-default event-panel-right">
           <div class="panel-heading"><h4><%= event.title%></h4></div>
           <div class="panel-body">
-            <%= event.description.truncate(140) %>
+            <%= event.description.truncate(120) %>
           </div>
         </div>
       </a>
