@@ -3,7 +3,7 @@
     <div class="row row-left row-time">
       <div class="panel panel-default event-panel-left event-time">
         <div class="panel-heading">
-          <%= event.start_date.strftime('%a, %d %b %Y') %>
+          <%= event.start_date.strftime('%a, %b %d %Y') %>
         </div>
       </div>
       <div class="arrow-right"></div>
@@ -17,6 +17,11 @@
         <div class="panel panel-default event-panel-right">
           <div class="panel-heading"><h4><%= event.title%></h4></div>
           <div class="panel-body">
+            <% if event.event_img? %>
+              <%= image_tag event.event_img, :class=>'img-preview' %> 
+            <% else %>
+              <%= image_tag "plane.png", :class=>'img-preview' %>
+            <% end %>
             <%= event.description.truncate(120) %>
           </div>
         </div>

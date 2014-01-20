@@ -9,8 +9,14 @@
       <div class="modal-body">
         <p class="light-text">When : <%= event.start_date%></p>
         <p class="light-text">Where : <%= event.place%></p>
+        <p class="light-text">Contact : <%= event.contact%></p>
+        <p class="light-text">Website : <%= link_to event.url, event.url, :target=>'_blank' %></p>
         <hr>
-        <%= image_tag event.event_img, :class=>'event-img' %>
+        <% if event.event_img? %>
+          <%= image_tag event.event_img, :class=>'event-img' %> 
+        <% else %>
+          <%= image_tag "plane.png", :class=>'event-img' %>
+        <% end %>
         <%= simple_format(event.description) %>
       </div>
     </div>

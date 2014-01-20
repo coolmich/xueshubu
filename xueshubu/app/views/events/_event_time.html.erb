@@ -1,0 +1,20 @@
+<ol class="breadcrumb event-time-picker <%= date%>">
+  <li>
+    <%= link_to "全部", events_path(:category=>@category)%>
+  </li>
+  <li>
+    <%= link_to "本周", events_path(:category=>@category, :date=>:this_week)%>
+  </li>
+  <li>
+    <%= link_to "今天", events_path(:category=>@category, :date=>:today)%>
+  </li>
+  <li>
+    <%= link_to "明日", events_path(:category=>@category, :date=>:tomorrow)%>
+  </li>
+  <li>
+    <%= link_to "周末", events_path(:category=>@category, :date=>:weekend)%>
+  </li>
+   <li>
+    <%= link_to "下周", events_path(:category=>@category, :date=>:nextweek)%>
+  </li>
+</ol>
