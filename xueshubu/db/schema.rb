@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140119235650) do
+ActiveRecord::Schema.define(version: 20140120165331) do
 
   create_table "blogs", force: true do |t|
     t.string   "title"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20140119235650) do
     t.integer  "category"
     t.string   "url"
     t.string   "contact"
+    t.integer  "highlighted"
   end
 
   add_index "events", ["start_date"], name: "index_events_on_start_date"

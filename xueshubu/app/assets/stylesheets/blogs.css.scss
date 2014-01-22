@@ -1,18 +1,30 @@
 html, body{
   height: 100%;
 }
-
+.home-btn{
+  position: fixed;
+  left: 10px;
+  top: 10px;
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+  &:hover{
+    color: black;
+    background-color: white;
+  }
+}
 .container{
   .title-author{
     margin-top: -250px;
+    font-family: 'Open Sans', Helvetica, Hiragino Sans GB, Arial, sans-serif;
     .blog-title{
       font-size: 45px;
-      font-weight: bolder;
+      font-weight: 600;
       color: white;
     }
     .blog-author{
       font-size: 20px;
-      color: #ddd;
+      color: rgba(255,255,255,0.8);
     }
   }
   .content-container{
@@ -20,6 +32,25 @@ html, body{
     .blog-content{
       font-family: Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, Lucida Grande, sans-serif;
       font-size: 18px;
+    }
+  }
+  .blog-preview{
+    padding: 20px 0px;
+    a{
+      color: black;
+      &:hover{
+        text-decoration: none;  
+      }
+    }
+    h2{
+      font-weight: 600;
+    }
+    h4{
+      color: #555;
+      font-weight: 100;
+    }
+    h5{
+      color: #777;
     }
   }
 }

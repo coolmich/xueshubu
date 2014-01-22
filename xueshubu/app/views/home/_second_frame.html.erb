@@ -1,1 +1,28 @@
-<%= link_to "View More", events_path%>
+<div class="event-frame">
+  <h1>活动</h1>
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-1">
+      <div class="panel panel-default event-panel">
+        <div class="panel-heading"><%= @event.title %></div>
+        <div class="panel-body">
+          <% if @event.event_img? %>
+            <%= image_tag @event.event_img %> 
+          <% else %>
+            <%= image_tag "plane.png" %>
+          <% end %>
+          <%= simple_format(@event.description.truncate(400)) %>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-5 view-more">
+      <h2>周围真精彩</h2>
+      <h2>因为你的参与</h2>
+        <%= link_to events_path do%>
+          <button type="button" class="btn btn-primary btn-lg">
+            更多精彩
+          </button>
+      <% end %>
+    </div>
+  </div>
+</div>
+

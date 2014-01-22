@@ -1,14 +1,28 @@
 <div class="container staff-frame">
+  <h1>我们</h1>
+  <h2>学术不</h2>
+  <h3>几乎都是吃货 (￣ε(#￣)　__( :3 / ∠)__</h3>
   <div class="row">
     <% @staffs.each do |staff| %>
-      <div class="col-sm-3">
+      <div class="col-sm-3 staff-box">
         <a href="javascript:;" rel="popover" class="img-box">
           <div class="pop-origin"></div>
           <%= image_tag staff.first_img.url, :class=>'staff-first-img' %>
         </a>
-        <div class="popover-title" style="display:none;"><%= staff.name%></div>
-        <div class="popover-content" style="display:none;"><%= staff.description%></div>
+        <div class="popover-title-<%= staff.name %>" style="display:none;"><%= staff.name%></div>
+        <div class="popover-content-<%= staff.name %>" style="display:none;"><%= staff.description%></div>
       </div>
+
+      <script type="text/javascript">
+      $('.img-box').popover({
+          html: true
+        , trigger: 'hover'
+        , placement: 'top'
+        , title: $('.popover-title-<%= staff.name %>').html()
+        , content: $('.popover-content-<%= staff.name %>').html()
+        , selector: $('.pop-origin')
+      });
+      </script>
     <% end %>
   </div>
 </div>
