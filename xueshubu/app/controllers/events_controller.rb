@@ -10,7 +10,6 @@ class EventsController < ApplicationController
     if params[:date]
       @events = @events.send(params[:date])
     end
-  
 
     @date = params[:date]
     @category = params[:category]

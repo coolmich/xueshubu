@@ -1,18 +1,22 @@
 <div class="events-container">
   <%= render 'event_nav'%>
   <%= render 'event_time', :date=>@date%>
-  <% count = 1 %>
   <div class="row" style="margin: 0px;">
     <div class="col-sm-6">
       <div class="arrow-down"></div>
     </div>
   </div>
-  <% @events.each do |event|%>
-    <% if count.even?%>
-      <%= render 'even_event', :event=>event%>
-    <% else %>
-      <%= render 'odd_event', :event=>event%>
+  <% if @events.count == 0 %>
+    <%= render 'error_content'%>
+  <% else %>
+    <% count = 1 %>
+    <% @events.each do |event|%>
+      <% if count.even?%>
+        <%= render 'even_event', :event=>event%>
+      <% else %>
+        <%= render 'odd_event', :event=>event%>
+      <% end %>
+      <% count += 1 %>
     <% end %>
-    <% count += 1 %>
   <% end %>
 </div>
