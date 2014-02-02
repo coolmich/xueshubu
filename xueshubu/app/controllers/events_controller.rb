@@ -4,7 +4,7 @@ class EventsController < ApplicationController
     if params[:category]
       @events = Event.where(:category=>params[:category])
     else
-      @events = Event.all
+      @events = Event.all_index
     end
 
     if params[:date]

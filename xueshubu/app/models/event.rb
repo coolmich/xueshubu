@@ -7,7 +7,7 @@ class Event < ActiveRecord::Base
     scope :weekend, ->{where(:start_date=>(Date.today.end_of_week - 1)..(Date.today.end_of_week + 1))}
     scope :nextweek, ->{where(:start_date=>(Date.today.next_week)..(Date.today.next_week + 7))}
 
-    default_scope { where(:start_date=>(Date.yesterday-7)..(Date.today+300))}
+    scope :all_index, ->{ where(:start_date=>(Date.yesterday-3)..(Date.today+300))}
 
     scope :old_events, ->{where(:start_date=>(Date.today-120)..(Date.yesterday)-30)}
 
